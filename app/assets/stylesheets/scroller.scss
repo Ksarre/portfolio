@@ -1,0 +1,42 @@
+.scroller {
+    width: 900px;
+    flex-wrap: wrap;
+  }
+
+.scroller-inner{
+    padding-block: 2rem;
+    display: flex;
+}
+
+img.icon {
+    box-sizing: content-box;
+    padding-left: 64px;
+    padding-right: 64px;
+    width: 64px;
+    height: 64px;
+}
+  
+  .scroller[content-animated="true"] {
+    overflow: hidden;
+    border: 3px solid rgb(57, 55, 55);
+    /* webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  
+  .scroller[content-animated="true"] .scroller-inner{
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 15s linear infinite;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      //awkward fix due to the inner-scroller being the size of the scroller
+      //and im not good enough at css to fix
+      //translate_amount = (icon_width * num_of_icons / scroller_width)*100
+      transform: translateX(calc(-149.33% - .75rem));
+    }
+  }

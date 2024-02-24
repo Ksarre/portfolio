@@ -1,0 +1,20 @@
+<nav id="navbar" class="container mx-0 px-0 navbar navbar-expand-lg justify-content-between">  
+        <div class="col-md-2"></div>
+        <%= link_to 'Profile', root_path, class: "col-1 navbar-brand ps-5" %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-md-6"></div>
+        <div class="collapse navbar-collapse flex-grow-0 text-center" id="navbarSupportedContent">
+          <ul class="col-md-1 navbar-nav">
+              <%= link_to "Contact", home_about_path, class: "nav-link my-auto" %>
+              <button class="btn icon-btn" type="submit">
+                <%= link_to image_tag("git-icon.png", :alt => "Github", style: 'height:75%;width:auto;'), "https://github.com/Ksarre", :target => "_blank" %>
+              </button>
+              <button class="btn icon-btn" type="submit">
+                  <%= link_to image_tag("linkedin-icon.png", :alt => "Linkedin", style: 'height:75%;width:auto;'), "https://www.linkedin.com/in/kylesarre/", :target => "_blank" %>
+              </button>
+          </ul>
+        </div>
+        <div class="col-md-2"></div>
+  </nav>

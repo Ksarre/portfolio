@@ -1,0 +1,95 @@
+<%= stylesheet_link_tag "application" %>
+<div id="landing-greeting" class="d-flex app-main fill">
+    <!--text-center adds margin:auto to text elements -->
+    <div class="col-7 d-flex ">
+        <div class="d-inline-flex flex-column mx-auto">
+            <h1 id="greeting-line-1" class="playfair-display-fontify">Hello,</h1>
+            <h1 id="greeting-line-2" class="playfair-display-fontify">I'm Kyle Sarre</h1>
+            <h2 id="h2-landing" class="lead playfair-display-fontify">A software developer from Baton Rouge, Louisiana. </p>
+            <h2 id="h2-landing" class="lead playfair-display-fontify">I build performant, scalable web applications for the cloud.  </p>
+            <div id="resume-dl" class="d-inline-flex flex-column text-center">
+                <div class="btn resume-btn btn-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M4.75 17.25a.75.75 0 0 1 .75.75v2.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V18a.75.75 0 0 1 1.5 0v2.25A1.75 1.75 0 0 1 18.25 22H5.75A1.75 1.75 0 0 1 4 20.25V18a.75.75 0 0 1 .75-.75Z"/><path d="M5.22 9.97a.749.749 0 0 1 1.06 0l4.97 4.969V2.75a.75.75 0 0 1 1.5 0v12.189l4.97-4.969a.749.749 0 1 1 1.06 1.06l-6.25 6.25a.749.749 0 0 1-1.06 0l-6.25-6.25a.749.749 0 0 1 0-1.06Z"/></svg>
+                    <%= link_to "My Resume", controller: "home", action: "download_pdf" %>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-5 contact-container">
+        </div>
+</div>
+<div class="row mx-0 dev-section">
+    <div class="d-flex flex-column justify-content-center col-12 col-md-6">
+        <div class="subsection text-center dev-content">
+            <h2 class="landing-heading">About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+    </div>
+    <div class="d-flex flex-column align-items-center col-12 col-md-6 justify-content-center cube-container cube-container">
+        <%= render 'home/cube' %>
+    </div>
+</div>
+<div class="subsection v-padded my-0">
+    <h2 class="landing-heading text-center">Technologies</h2>
+    <div class="row scroller-separator"></div>
+        <div class="row scroller">
+            <div class= "scroller-inner">
+            <img class="icon" src="/assets/django-icon.png" alt="Django" />
+            <img class="icon" src="/assets/spring-icon.png" alt="Spring" />
+            <img class="icon" src="/assets/git-icon.png" alt="Github" />
+            <img class="icon" src="/assets/docker-icon.png" alt="Docker" />
+            <img class="icon" src="/assets/jira-icon.png" alt="Jira" />
+            <img class="icon" src="/assets/node-icon.png" alt="Nodejs" />
+            <img class="icon" src="/assets/python-icon.png" alt="Python" />
+            <img class="icon" src="/assets/django-icon.png" alt="Django" />
+            <img class="icon" src="/assets/spring-icon.png" alt="Spring" />
+            <img class="icon" src="/assets/git-icon.png" alt="Github" />
+            <img class="icon" src="/assets/docker-icon.png" alt="Docker" />
+            <img class="icon" src="/assets/jira-icon.png" alt="Jira" />
+            <img class="icon" src="/assets/node-icon.png" alt="Nodejs" />
+            <img class="icon" src="/assets/python-icon.png" alt="Python" />
+        </div>
+    </div>
+    <div class="row scroller-separator"></div>
+</div>
+<div class="subsection my-0">
+  <% @projects.each_with_index do |project, index| %>
+    <% if index.even? %>
+      <%= render partial: "home/project", locals: { project: project } %>
+    <% else %>
+      <%= render partial: "home/project_reversed", locals: { project: project } %>
+    <% end %>
+  <% end %>
+</div>
+    <%# <div class="row py-5">
+        <div class="col-12 col-sm-4 col-md-4">
+            <div class="subsection mx-5">
+            <h2>
+                PyPlay
+            </h2>
+            <p class="proj-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-8 col-md-8">
+        <div id="card-2" class="span project-card" style="width: 40rem; height: 25rem;"></div>
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col-12 col-sm-8 col-md-8">
+        <div id="card-3" class="span project-card" style="width: 40rem; height: 25rem;">|IssueIt|</div>
+        </div>
+        <div class="col-12 col-sm-4 col-md-4 ">
+            <div class="subsection mx-5">
+            <h2>
+                Space Survivor
+            </h2>
+            <p class="proj-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            </div>
+        </div>
+    </div> %>
+</div>

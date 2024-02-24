@@ -1,0 +1,23 @@
+<div class="subsection-project v-padded mt-0">
+    <h2 class="landing-heading">Projects</h2>
+  <% @projects.each do |project| %>
+    <div class="row py-5">
+      <div class="col-12 col-sm-8 col-md-8">
+        <div id="card-1" class="span project-card" style="width: 40rem; height: 25rem;">IssueIt</div>
+        </div>
+        <% @project.tags.each do |tag| %>
+          <li><%= tag.name %></li>
+        <% end %>
+      <div class="col-12 col-sm-4 col-md-4">
+          <div class="subsection mx-5">
+              <h2>
+                  <%= @project.title %>
+              </h2>
+              <p class="proj-description">
+                  <%= @project.description %>
+              </p>
+          </div>
+      </div>
+    </div>
+  <% end %>
+</div>

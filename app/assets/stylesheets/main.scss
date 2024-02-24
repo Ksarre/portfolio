@@ -1,0 +1,195 @@
+@import './globals';
+
+.app-main {
+    height: 100vh;
+    min-height: 750px;
+    align-items: center;
+    background-image: url('laptop-transformed.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background: radial-gradient(circle at 50% 5%,
+    // rgb(32,32,32) 0%,
+    //   rgb(30,30,30) 4%,
+    //   rgb(23,23,23) 15%,
+    //   rgb(16,16,16) 30%,
+    //   rgb(8,8,8) 60%,
+    //   rgb(0,0,0) 100%);
+}
+
+.app-about{
+    height: 100vh;
+    min-height: 750px;
+    background-color: $base-color;
+}
+
+.scroller-separator {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+.v-padded {
+    padding-bottom: 15em;
+    padding-top: 15em;
+}
+
+.header {
+    min-height: 200px;
+}
+
+.curved-borders {
+    border-radius: 25px;
+}
+
+#resume-dl {
+    font-family:'Trebuchet MS', sans-serif;
+    background: rgba(254, 200, 51, 0.868);
+    border-radius: 5px;
+}
+
+#resume-dl:hover {
+    background: rgba(254, 180, 51, 0.868);
+}
+
+#resume-dl.extended-background {
+    padding: 32px;
+    margin: -32px;
+}
+
+a {
+   color: rgb(22, 21, 21); 
+}
+
+.subsection{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: $base-color;
+    margin-top: 5em;
+}
+
+.subsection-project {
+    @extend .subsection;
+}
+
+.subsection-empty {
+    @extend .subsection;
+    height: 900px;
+    background-color: transparent !important;
+}
+
+.subsection > .proj-description{
+    width:350px;
+    text-align: center;
+    color: #afafbd
+}
+
+.dev-section {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #262626;
+    background-color: $base-color;
+    height: 35em;
+}
+
+.contact-body{
+    @extend .subsection;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    height: 25rem;
+    width:25%;
+    margin: auto;
+    background-color: rgb(34, 35, 39);
+    border-radius: 10px;
+}
+
+.contact-container {
+    position: relative
+}
+
+.contact-img{
+    z-index: 99;
+    background-image: url(leaning-man.png);
+    background-repeat: no-repeat;
+    width: 182px;
+    height: 500px;
+    position: absolute;
+    top: 7rem;
+    right: 12rem;
+}
+
+.project-card{
+    background-color: rgb(34, 35, 39);
+    border-radius: 10px;
+    transition: .75s;
+    margin: auto;
+    margin-bottom: 5em;
+    margin-top: 5em;
+}
+
+.icon-btn{
+    transition: .5s;
+}
+
+.icon-btn:hover{
+    transform: scale(1.25);
+}
+
+.project-card:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.contact-button{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.landing-heading{
+    color: $h2-color; 
+    font-size: 2.5rem;
+    z-index: 99;
+    margin-top: 6rem;
+    margin-bottom:6rem;
+}
+
+.landing-heading-contact {
+    @extend .landing-heading;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+}
+
+.landing-heading{
+    color: $h2-color; 
+    font-size: 2.5rem;
+    z-index: 99;
+    margin-bottom:2rem;
+}
+
+.landing-heading::before {
+    position: relative;
+    border-bottom: 15px solid rgb(234, 102, 102);
+    margin: 0 auto;
+    content: "";
+    width: 80%;
+    left: .75em;
+    top: 1.25em;
+    z-index: -1;
+    display: block;
+}
+
+#resume-dl a:link {
+    text-decoration: none;
+}
+
+h2 {
+    color: $h2-color;
+}
+
+.cube-container {
+    border-left: 1px solid #afafbd;
+}
+
+.about-me-container{
+    z-index: 0;
+}
