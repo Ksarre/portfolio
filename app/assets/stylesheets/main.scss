@@ -16,6 +16,11 @@
     //   rgb(0,0,0) 100%);
 }
 
+@media (max-width: 1024px){
+.greeting-container{
+    text-align: center;
+}}
+
 .app-about{
     height: 100vh;
     min-height: 750px;
@@ -30,8 +35,8 @@
 }
 
 .v-padded {
-    padding-bottom: 15em;
-    padding-top: 15em;
+    padding-bottom: 150px;
+    padding-top: 150px;
 }
 
 .header {
@@ -80,7 +85,7 @@ a {
 }
 
 .subsection > .proj-description{
-    width:350px;
+    width: 100%;
     text-align: center;
     color: #afafbd
 }
@@ -88,7 +93,6 @@ a {
 .dev-section {
     display: flex;
     flex-direction: row;
-    border: 1px solid #262626;
     background-color: $base-color;
     height: 35em;
 }
@@ -122,10 +126,11 @@ a {
 .project-card{
     background-color: rgb(34, 35, 39);
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    min-height: 300px;
     transition: .75s;
-    margin: auto;
-    margin-bottom: 5em;
-    margin-top: 5em;
 }
 
 .icon-btn{
@@ -187,9 +192,9 @@ h2 {
 }
 
 .cube-container {
-    border-left: 1px solid #afafbd;
+    border: 1px solid rgb(30, 28, 35)
 }
 
 .about-me-container{
-    z-index: 0;
+    border: 1px solid #262626;
 }

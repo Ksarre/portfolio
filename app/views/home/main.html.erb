@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag "application" %>
 <div id="landing-greeting" class="d-flex app-main fill">
     <!--text-center adds margin:auto to text elements -->
-    <div class="col-7 d-flex ">
-        <div class="d-inline-flex flex-column mx-auto">
+    <div class="col-md-12 col-lg-12 col-xl-7 d-flex ">
+        <div class="d-inline-flex flex-column mx-auto greeting-container">
             <h1 id="greeting-line-1" class="playfair-display-fontify">Hello,</h1>
             <h1 id="greeting-line-2" class="playfair-display-fontify">I'm Kyle Sarre</h1>
             <h2 id="h2-landing" class="lead playfair-display-fontify">A software developer from Baton Rouge, Louisiana. </p>
@@ -13,47 +13,45 @@
                     <%= link_to "My Resume", controller: "home", action: "download_pdf" %>
                 </div>
             </div>
-            
         </div>
     </div>
-    <div class="col-5 contact-container">
-        </div>
 </div>
 <div class="row mx-0 dev-section">
-    <div class="d-flex flex-column justify-content-center col-12 col-md-6">
+    <div class="d-flex flex-column justify-content-center col-12 col-md-6 about-me-container">
         <div class="subsection text-center dev-content">
             <h2 class="landing-heading">About Me</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
     </div>
-    <div class="d-flex flex-column align-items-center col-12 col-md-6 justify-content-center cube-container cube-container">
+    <div class="d-flex flex-column align-items-center col-12 col-md-6 justify-content-center cube-container">
         <%= render 'home/cube' %>
     </div>
 </div>
-<div class="subsection v-padded my-0">
-    <h2 class="landing-heading text-center">Technologies</h2>
+<div class="subsection my-0">
+    <h2 class="landing-heading text-center v-padded">Technologies</h2>
     <div class="row scroller-separator"></div>
         <div class="row scroller">
             <div class= "scroller-inner">
-            <img class="icon" src="/assets/django-icon.png" alt="Django" />
-            <img class="icon" src="/assets/spring-icon.png" alt="Spring" />
-            <img class="icon" src="/assets/git-icon.png" alt="Github" />
-            <img class="icon" src="/assets/docker-icon.png" alt="Docker" />
-            <img class="icon" src="/assets/jira-icon.png" alt="Jira" />
-            <img class="icon" src="/assets/node-icon.png" alt="Nodejs" />
-            <img class="icon" src="/assets/python-icon.png" alt="Python" />
-            <img class="icon" src="/assets/django-icon.png" alt="Django" />
-            <img class="icon" src="/assets/spring-icon.png" alt="Spring" />
-            <img class="icon" src="/assets/git-icon.png" alt="Github" />
-            <img class="icon" src="/assets/docker-icon.png" alt="Docker" />
-            <img class="icon" src="/assets/jira-icon.png" alt="Jira" />
-            <img class="icon" src="/assets/node-icon.png" alt="Nodejs" />
-            <img class="icon" src="/assets/python-icon.png" alt="Python" />
+            <img class="icon" src="<%= asset_path('django-icon.png') %>" alt="Django" />
+            <img class="icon" src="<%= asset_path('spring-icon.png') %>" alt="Spring" />
+            <img class="icon" src="<%= asset_path('git-icon.png') %>" alt="Github" />
+            <img class="icon" src="<%= asset_path('docker-icon.png') %>" alt="Docker" />
+            <img class="icon" src="<%= asset_path('jira-icon.png') %>"  alt="Jira" />
+            <img class="icon" src="<%= asset_path('node-icon.png') %>" alt="Nodejs" />
+            <img class="icon" src="<%= asset_path('python-icon.png') %>" alt="Python" />
+            <img class="icon" src="<%= asset_path('django-icon.png') %>" alt="Django" />
+            <img class="icon" src="<%= asset_path('spring-icon.png') %>" alt="Spring" />
+            <img class="icon" src="<%= asset_path('git-icon.png') %>" alt="Github" />
+            <img class="icon" src="<%= asset_path('docker-icon.png') %>" alt="Docker" />
+            <img class="icon" src="<%= asset_path('jira-icon.png') %>" alt="Jira" />
+            <img class="icon" src="<%= asset_path('node-icon.png') %>" alt="Nodejs" />
+            <img class="icon" src="<%= asset_path('python-icon.png') %>" alt="Python" />
         </div>
     </div>
     <div class="row scroller-separator"></div>
 </div>
-<div class="subsection my-0">
+<div class="subsection my-0 v-padded">
+    <h2 class="landing-heading text-center v-padded">Projects</h2>
   <% @projects.each_with_index do |project, index| %>
     <% if index.even? %>
       <%= render partial: "home/project", locals: { project: project } %>

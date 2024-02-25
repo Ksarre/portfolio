@@ -1,5 +1,7 @@
 .scroller {
-    width: 900px;
+    width: 50%;
+    min-width: 400px;
+    max-width: 800px;
     flex-wrap: wrap;
   }
 
