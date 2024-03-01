@@ -1,11 +1,11 @@
 {
   "projects": [
     {
-      "description": "bar",
+      "description": "With just the press of a button, users can play the latest video content from their favourite uploaders in a minified mp3 format. The app also provides tabs for previously watched content for additional viewings. Subscriptions can be added or removed to allow greater control of their playlist.",
       "tags": ["gitlab", "docker", "python", "react-native", "postgres", "OAuth"],
       "title": "PyTube",
       "src": "",
-      "redirect_url": "www.bar.com"
+      "redirect_url": "https://github.com/Ksarre/portfolio"
     },
     {
       "description": "foo",

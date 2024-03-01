@@ -3,16 +3,18 @@
     <div id="card-1" class="span project-card">IssueIt</div>
     </div>
     <div class="col-12 col-sm-4 col-md-4">
-        <div class="subsection mx-5">
+        <div class="subsection my-0 mx-5">
             <h2>
                 <%= project.title %>
             </h2>
             <p class="proj-description">
                 <%= project.description %>
             </p>
-            <% project.tags.each do |tag| %>
-                <li><%= tag.name %></li>
-            <% end %>
+            <div class="d-flex flex-wrap justify-content-left gap-2">
+                <% project.tags.each do |tag| %>
+                    <div class="p-2 border"><%= tag.name %></div>
+                <% end %>
+            </div>
         </div>
     </div>
 </div>
