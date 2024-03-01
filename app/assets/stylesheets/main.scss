@@ -94,7 +94,6 @@ a {
     display: flex;
     flex-direction: row;
     background-color: $base-color;
-    height: 35em;
 }
 
 .contact-body{
@@ -193,9 +192,16 @@ h2 {
 }
 
 .cube-container {
-    border: 1px solid rgb(30, 28, 35)
+    border: 1px solid rgb(30, 28, 35);
+    min-height: 550px;
 }
 
 .about-me-container{
     border: 1px solid #262626;
+}
+
+.img-placeholder {
+    height: 200px;
+    width:200px;
+    background-color: rgb(170, 163, 163);
 }

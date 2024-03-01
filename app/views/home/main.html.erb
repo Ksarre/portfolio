@@ -17,17 +17,48 @@
 </div>
 <div class="row mx-0 dev-section">
     <div class="d-flex flex-column justify-content-center col-12 col-md-6 about-me-container">
-        <div class="subsection text-center dev-content">
+        <div class="subsection text-center dev-content my-0">
             <h2 class="landing-heading">About Me</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
     </div>
-    <div class="d-flex flex-column align-items-center col-12 col-md-6 justify-content-center cube-container">
+    <div class="d-flex flex-column col-12 col-md-6 justify-content-center cube-container">
         <%= render 'home/cube' %>
     </div>
 </div>
+<div class="subsection my-0 py-5">
+    <div class="container row">
+        <div class="col-12 col-md-3">
+            <div class="dev-content text-center">
+                <img class="img-placeholder">
+                <h2>Web Developer</h2>
+                <p>Over 4 years of professional web experience</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="dev-content text-center">
+                <img class="img-placeholder">
+                <h2>Cloud Practitioner</h2>
+                <p>Experience managing cloud infrastructure and utilizing cloud solutions for app development</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="dev-content text-center">
+                <img class="img-placeholder">
+                <h2>Full-stack</h2>
+                <p>Experience with all sides of the equation: UI, APIs, databases</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="dev-content text-center">
+                <img class="img-placeholder">
+                <h2>Flexible</h2>
+                <p>Language-agnostic paradigm</p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="subsection my-0">
-    <h2 class="landing-heading text-center v-padded">Technologies</h2>
     <div class="row scroller-separator"></div>
         <div class="row scroller">
             <div class= "scroller-inner">
@@ -49,7 +80,7 @@
     </div>
     <div class="row scroller-separator"></div>
 </div>
-<div class="subsection my-0 v-padded">
+<div class="subsection my-0">
     <h2 class="landing-heading text-center v-padded">Projects</h2>
   <% @projects.each_with_index do |project, index| %>
     <% if index.even? %>
@@ -58,6 +89,8 @@
       <%= render partial: "home/project_reversed", locals: { project: project } %>
     <% end %>
   <% end %>
+</div>
+<div class="v-padded subsection my-0">
 </div>
     <%# <div class="row py-5">
         <div class="col-12 col-sm-4 col-md-4">
